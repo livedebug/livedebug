@@ -3,6 +3,10 @@ Details
 Issue
 https://github.com/onivim/oni2/issues/1633
 
+# Pull requests and commits
+
+[Unit test updates reproducing the problem](https://github.com/onivim/libvim/pull/215)
+
 # Context
 Onivim 2 is alpha, donateware, so building from source is the only option.
 Observations
@@ -16,58 +20,6 @@ Other notes - with change (c) we can see the editor change mode with I it does n
 
 Unit test MU_TEST(test_insert_block_mode) does the operations but does not check the file.  
 
-Test output for the following code produces 
-  char_u *lines[] = {"line1", "line2", "line3", "line4", "line5"};
-  vimBufferSetLines(curbuf, 0, 3, lines, 5);
-
-```
-//  vimInput("<c-v>");
-//  vimInput("j");
-//  vimInput("j");
-//  vimInput("j");
-//
-  vimInput("I");
-
-  mu_check((vimGetMode() & INSERT) == INSERT);
-
-  vimInput("a");
-  vimInput("b");
-  vimInput("c");
-
-  char_u *line = vimBufferGetLine(curbuf, 1);
-  printf("LINE: %s\n", line);
-  line = vimBufferGetLine(curbuf, 2);
-  printf("LINE: %s\n", line);
-  line = vimBufferGetLine(curbuf, 3);
-  printf("LINE: %s\n", line);
-```
-Outputs 
-
-LINE: abcline1
-LINE: line2
-LINE: line3
-
-
-Visual mode lines uncommented above result in 
-
-LINE: line1
-LINE: line2
-LINE: line3
-
-Consequently, it looks like visual mode isn’t getting run properly.
-
-Changing VimInput(“c”) 
-Should give abcine1, abcine2 (we are replacing the l with abc in block mode
-
-LINE: abcine1
-LINE: ine2
-LINE: ine3
-Conceptual Models
-
-Hypothesis
-ID
-Confidence
-
 # Hypothesis
 
 ID | Confidence | Status | Hypothesis | Notes 
@@ -76,7 +28,6 @@ ID | Confidence | Status | Hypothesis | Notes
 2  | High       | Unknown | I and c have slightly different paths.
 
 ## Issue is within libvim, not vim
-
 Test cases confirm, creating pull request to improve unit test coverage before diving into libvim.
 
 ## I and c have slightly different paths
