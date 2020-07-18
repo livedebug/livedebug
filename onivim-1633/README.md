@@ -67,36 +67,22 @@ Conceptual Models
 Hypothesis
 ID
 Confidence
+
 # Hypothesis
-Notes
-Proof/Refute
-1
-High
-Issue is within libvim, not vim
 
+ID | Confidence | Status | Hypothesis | Notes 
+---|------------|--------|------------|------
+1  | High       | Confirmed | Issue is within libvim, not vim | 
+2  | High       | Unknown | I and c have slightly different paths.
 
+## Issue is within libvim, not vim
 
+Test cases confirm, creating pull request to improve unit test coverage before diving into libvim.
 
-2
-High
-I and c have slightly different paths.
+## I and c have slightly different paths
 Is this within the editor or within the libvim?
 Testcases within libvim, let’s look at them when we have it building.
 
-
-
-
-
-
-
-
-
-
-
-
-# Proof/Refute Data
-(1)
- 
 
 # Extra Data Needed
 Architecture/event model.
