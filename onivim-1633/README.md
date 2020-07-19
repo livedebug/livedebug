@@ -25,7 +25,10 @@ Unit test MU_TEST(test_insert_block_mode) does the operations but does not check
 ID | Confidence | Status | Hypothesis | Notes 
 ---|------------|--------|------------|------
 1  | High       | Confirmed | Issue is within libvim, not vim | 
-2  | High       | Unknown | I and c have slightly different paths.
+1.1 | High       | Confirmed | I and c have slightly different paths.
+1.2 | Low | Unknown | OP_INSERT needs a bit more state enabled before it takes action
+1.3 | Low | Unknown | Visual Mode is not fully setup for deletion |
+
 
 ## Issue is within libvim, not vim
 Test cases confirm, creating pull request to improve unit test coverage before diving into libvim.
@@ -39,6 +42,19 @@ Testcases within libvim, let’s look at them when we have it building.
 Architecture/event model.
 
 # Scratch Notes
-`vim.h` contains OP_XYZ #defines, which map to different operators "c" is "OP_CHANGE" "I" is or "OP_INSERT"
+
+## 20200719
+`vim.h` contains OP_XYZ #defines, which map to different operators "c" is "OP_CHANGE" "I" is or "OP_INSERT".
+OP_CHANGE is used in normal.c and ops.c, OP_INSERT is used in edit.c, normal.c, ops.c
+
+OP_INSERT doesn't appear to be easily hit in the same way that OP_CHANGE is.
+
+General logic is 
+  - Finish operation
+  - 
+  
+ state changes to 16
+ 
+ I & c move from state 1 (normal) to state 16 (0x10 INSERT)l
 
 
