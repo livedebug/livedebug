@@ -37,6 +37,8 @@ Testcases within libvim, let’s look at them when we have it building.
 
 # Extra Data Needed
 Architecture/event model.
-Scratch Notes
-Libvim ! = neovm
+
+# Scratch Notes
+`vim.h` contains OP_XYZ #defines, which map to different operators "c" is "OP_CHANGE" "I" is or "OP_INSERT"
+
 
