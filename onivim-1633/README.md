@@ -28,6 +28,7 @@ ID | Confidence | Status | Hypothesis | Notes
 1.1 | High       | Confirmed | I and c have slightly different paths.
 1.2 | Low | Unknown | OP_INSERT needs a bit more state enabled before it takes action
 1.3 | Low | Unknown | Visual Mode is not fully setup for deletion |
+1.3.1 | Low | Unknown | Statemachine is receiving the incorrect data to operate on
 
 
 ## Issue is within libvim, not vim
@@ -42,6 +43,11 @@ Testcases within libvim, let’s look at them when we have it building.
 Architecture/event model.
 
 # Scratch Notes
+
+## 20200720
+in normal.c, nv_edit, we have the code going down to the moving to begin of line (via beginline), so we should be at the right point for insertion.
+Checkpoint - "I" seems to be pushing into sm_push, need to work out how it is being executed
+
 
 ## 20200719
 `vim.h` contains OP_XYZ #defines, which map to different operators "c" is "OP_CHANGE" "I" is or "OP_INSERT".
