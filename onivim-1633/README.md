@@ -31,7 +31,7 @@ ID | Confidence | Status | Hypothesis | Notes
 1.3.1 | Low | Unknown | Statemachine is receiving the incorrect data to operate on
 
 
-## Issue is within libvim, not vim
+## Issue is within libvim, not onivim2
 Test cases confirm, creating pull request to improve unit test coverage before diving into libvim.
 
 ## I and c have slightly different paths
