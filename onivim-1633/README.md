@@ -45,7 +45,7 @@ Architecture/event model.
 # Scratch Notes
 
 ## 20200722 
-Discovered [vim state map](vim-modes-transition-diagram.svg) at https://www.reddit.com/r/vim/comments/1mcrch/vim_modes_transition_diagram/.  
+Discovered ![vim state map](vim-modes-transition-diagram.svg) at https://www.reddit.com/r/vim/comments/1mcrch/vim_modes_transition_diagram/.  
 Confirms the state transitions I had debugged yesterday.
 
 ## 20200721
