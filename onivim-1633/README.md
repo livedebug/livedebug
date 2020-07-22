@@ -7,7 +7,7 @@ https://github.com/onivim/oni2/issues/1633
 
 [Unit test updates reproducing the problem](https://github.com/onivim/libvim/pull/215)
 
-# Context
+# Problem Summary
 Onivim 2 is alpha, donateware, so building from source is the only option.
 Observations
 With vim - we have ^V kkk I // will insert
