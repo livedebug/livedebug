@@ -44,6 +44,13 @@ Architecture/event model.
 
 # Scratch Notes
 
+## 20200722 
+Discovered [vim state map](vim-modes-transition-diagram.svg) at https://www.reddit.com/r/vim/comments/1mcrch/vim_modes_transition_diagram/.  
+Confirms the state transitions I had debugged yesterday.
+
+## 20200721
+Not too successful.  Lots of going in and out of state machine callbacks
+
 ## 20200720
 in normal.c, nv_edit, we have the code going down to the moving to begin of line (via beginline), so we should be at the right point for insertion.
 Checkpoint - "I" seems to be pushing into sm_push, need to work out how it is being executed
