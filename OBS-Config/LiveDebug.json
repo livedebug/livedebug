@@ -88,6 +88,36 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "coreaudio_input_capture",
+            "mixers": 255,
+            "monitoring_type": 2,
+            "muted": false,
+            "name": "Elgato Background",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "device_id": "AppleUSBAudioEngine:Elgato:Game Capture HD60 S+:00049A442D000:4"
+            },
+            "sync": 0,
+            "versioned_id": "coreaudio_input_capture",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
                 "OBSBasic.SelectScene": []
             },
             "id": "scene",
@@ -126,41 +156,6 @@
             "mixers": 255,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Starting Soon",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "css": "",
-                "height": 900,
-                "restart_when_active": true,
-                "shutdown": false,
-                "url": "https://livedebug.github.io/livedebug/stream-support/starting-soon.html",
-                "width": 1600
-            },
-            "sync": 0,
-            "versioned_id": "browser_source",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "libobs.unmute": []
-            },
-            "id": "browser_source",
-            "mixers": 255,
-            "monitoring_type": 0,
-            "muted": false,
             "name": "BRB",
             "prev_ver": 419430408,
             "private_settings": {},
@@ -172,7 +167,8 @@
                 "css": "",
                 "height": 900,
                 "restart_when_active": true,
-                "url": "https://livedebug.github.io/livedebug/stream-support/be-right-back.html",
+                "shutdown": true,
+                "url": "https://livedebug.dev/stream-support/starting-soon.html",
                 "width": 1600
             },
             "sync": 0,
@@ -189,8 +185,10 @@
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.BRB": [],
                 "libobs.hide_scene_item.Dressing": [],
+                "libobs.hide_scene_item.Elgato Audio": [],
                 "libobs.show_scene_item.BRB": [],
-                "libobs.show_scene_item.Dressing": []
+                "libobs.show_scene_item.Dressing": [],
+                "libobs.show_scene_item.Elgato Audio": []
             },
             "id": "scene",
             "mixers": 0,
@@ -205,7 +203,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 2,
+                "id_counter": 3,
                 "items": [
                     {
                         "align": 5,
@@ -252,6 +250,35 @@
                         "id": 2,
                         "locked": false,
                         "name": "BRB",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 3,
+                        "locked": false,
+                        "name": "Elgato Audio",
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
@@ -369,12 +396,10 @@
                 "libobs.hide_scene_item.Alert Box": [],
                 "libobs.hide_scene_item.Chat Box": [],
                 "libobs.hide_scene_item.Current Status": [],
-                "libobs.hide_scene_item.Elgato Audio": [],
                 "libobs.hide_scene_item.White Chat Background": [],
                 "libobs.show_scene_item.Alert Box": [],
                 "libobs.show_scene_item.Chat Box": [],
                 "libobs.show_scene_item.Current Status": [],
-                "libobs.show_scene_item.Elgato Audio": [],
                 "libobs.show_scene_item.White Chat Background": []
             },
             "id": "scene",
@@ -410,35 +435,6 @@
                         "name": "White Chat Background",
                         "pos": {
                             "x": 1600.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 1,
-                        "locked": false,
-                        "name": "Elgato Audio",
-                        "pos": {
-                            "x": 0.0,
                             "y": 0.0
                         },
                         "private_settings": {},
@@ -579,10 +575,12 @@
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.Dressing": [],
+                "libobs.hide_scene_item.Elgato Background": [],
                 "libobs.hide_scene_item.Elgato VIdeo": [],
                 "libobs.hide_scene_item.StreamCam": [],
                 "libobs.hide_scene_item.Yeti": [],
                 "libobs.show_scene_item.Dressing": [],
+                "libobs.show_scene_item.Elgato Background": [],
                 "libobs.show_scene_item.Elgato VIdeo": [],
                 "libobs.show_scene_item.StreamCam": [],
                 "libobs.show_scene_item.Yeti": []
@@ -600,7 +598,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 6,
+                "id_counter": 7,
                 "items": [
                     {
                         "align": 5,
@@ -648,14 +646,14 @@
                         "locked": false,
                         "name": "StreamCam",
                         "pos": {
-                            "x": 1596.0,
-                            "y": 837.0
+                            "x": 1606.0,
+                            "y": 844.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.50625002384185791,
-                            "y": 0.50625002384185791
+                            "x": 0.49062499403953552,
+                            "y": 0.49166667461395264
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -712,8 +710,37 @@
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 0.83229166269302368,
-                            "y": 0.83240741491317749
+                            "x": 0.83802086114883423,
+                            "y": 0.83796298503875732
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 7,
+                        "locked": false,
+                        "name": "Elgato Background",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -733,9 +760,11 @@
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
                 "libobs.hide_scene_item.Dressing": [],
+                "libobs.hide_scene_item.Elgato Background": [],
                 "libobs.hide_scene_item.StreamCam Full": [],
                 "libobs.hide_scene_item.Yeti": [],
                 "libobs.show_scene_item.Dressing": [],
+                "libobs.show_scene_item.Elgato Background": [],
                 "libobs.show_scene_item.StreamCam Full": [],
                 "libobs.show_scene_item.Yeti": []
             },
@@ -752,7 +781,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 3,
+                "id_counter": 4,
                 "items": [
                     {
                         "align": 5,
@@ -840,6 +869,35 @@
                         },
                         "scale_filter": "disable",
                         "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 4,
+                        "locked": false,
+                        "name": "Elgato Background",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
                     }
                 ]
             },
@@ -855,10 +913,12 @@
             "flags": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.BRB": [],
                 "libobs.hide_scene_item.Dressing": [],
-                "libobs.hide_scene_item.Starting Soon": [],
+                "libobs.hide_scene_item.Elgato Audio": [],
+                "libobs.show_scene_item.BRB": [],
                 "libobs.show_scene_item.Dressing": [],
-                "libobs.show_scene_item.Starting Soon": []
+                "libobs.show_scene_item.Elgato Audio": []
             },
             "id": "scene",
             "mixers": 0,
@@ -873,7 +933,7 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 3,
+                "id_counter": 5,
                 "items": [
                     {
                         "align": 5,
@@ -917,9 +977,38 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 3,
+                        "id": 4,
                         "locked": false,
-                        "name": "Starting Soon",
+                        "name": "BRB",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 5,
+                        "locked": false,
+                        "name": "Elgato Audio",
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
@@ -1210,7 +1299,7 @@
             },
             "sync": 0,
             "versioned_id": "browser_source",
-            "volume": 1.0
+            "volume": 1.0232930183410645
         },
         {
             "balance": 0.5,
