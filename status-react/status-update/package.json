@@ -14,7 +14,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build && mv build ../../docs/stream-support/status",
+    "build": "react-scripts build && rm -rf ../../docs/stream-support/status && mv build ../../docs/stream-support/status",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
@@ -32,5 +32,7 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "homepage": "."
+
 }
