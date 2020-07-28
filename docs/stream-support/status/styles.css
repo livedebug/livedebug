@@ -86,6 +86,8 @@ h3 {
 }
 
 .content {
+    background: rgb(256, 256, 256);
+
     padding: 2em 1em 0;
 }
 
