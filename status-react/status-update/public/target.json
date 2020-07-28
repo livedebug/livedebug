@@ -1,0 +1,6 @@
+{ "tasks": [
+    {"desc":"I'm a Software Manager, AmA","complete":false},
+    {"desc":"Make the status page update from git automagically with react","complete":false},
+    {"desc":"Play with discord/twitch webhooks","complete":true},
+    {"desc":"Wrap up onivim 2 bug #1633 work","complete":false}
+  ]}
