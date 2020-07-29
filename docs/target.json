@@ -1,10 +1,5 @@
 {
   "tasks": [{
-      "desc": "Display only the first 4 displayable tasks",
-      "complete": false,
-      "display": true
-    },
-    {
       "desc": "I'm a Software Manager, AmA",
       "complete": false,
       "display": true
@@ -22,6 +17,11 @@
     {
       "desc": "Wrap up onivim 2 bug #1633 work",
       "complete": false,
+      "display": true
+    },
+    {
+      "desc": "Display only the first 4 displayable tasks",
+      "complete": true,
       "display": true
     }
   ]
