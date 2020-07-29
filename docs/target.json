@@ -1,6 +1,28 @@
-{ "tasks": [
-    {"desc":"I'm a Software Manager, AmA","complete":false,"display":true},
-    {"desc":"Make the status page update from git automagically with react","complete":true,"display":true},
-    {"desc":"Play with discord/twitch webhooks","complete":false,"display":true},
-    {"desc":"Wrap up onivim 2 bug #1633 work","complete":false,"display":true}
-  ]}
+{
+  "tasks": [{
+      "desc": "Display only the first 4 displayable tasks",
+      "complete": false,
+      "display": true
+    },
+    {
+      "desc": "I'm a Software Manager, AmA",
+      "complete": false,
+      "display": true
+    },
+    {
+      "desc": "Make the status page update from git automagically with react",
+      "complete": true,
+      "display": false
+    },
+    {
+      "desc": "Play with discord/twitch webhooks",
+      "complete": false,
+      "display": true
+    },
+    {
+      "desc": "Wrap up onivim 2 bug #1633 work",
+      "complete": false,
+      "display": true
+    }
+  ]
+}
