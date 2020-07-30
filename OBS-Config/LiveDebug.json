@@ -87,17 +87,12 @@
             "deinterlace_mode": 0,
             "enabled": true,
             "flags": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "libobs.unmute": []
-            },
-            "id": "coreaudio_input_capture",
-            "mixers": 255,
-            "monitoring_type": 2,
+            "hotkeys": {},
+            "id": "color_source",
+            "mixers": 0,
+            "monitoring_type": 0,
             "muted": false,
-            "name": "Elgato Background",
+            "name": "White Chat Background",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -105,10 +100,137 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "device_id": "AppleUSBAudioEngine:Elgato:Game Capture HD60 S+:00049A442D000:4"
+                "height": 1080,
+                "width": 320
             },
             "sync": 0,
-            "versioned_id": "coreaudio_input_capture",
+            "versioned_id": "color_source_v2",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "av_capture_input",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "StreamCam Full",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "device": "0x200000046d0893",
+                "device_name": "Logitech StreamCam #3",
+                "preset": "AVCaptureSessionPreset1280x720"
+            },
+            "sync": 0,
+            "versioned_id": "av_capture_input",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 255,
+            "monitoring_type": 2,
+            "muted": false,
+            "name": "Current Status",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "css": "",
+                "height": 180,
+                "restart_when_active": true,
+                "shutdown": true,
+                "url": "https://livedebug.github.io/livedebug/stream-support/status/",
+                "width": 1600
+            },
+            "sync": 0,
+            "versioned_id": "browser_source",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 255,
+            "monitoring_type": 2,
+            "muted": false,
+            "name": "Chat Box",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "css": "",
+                "height": 800,
+                "url": "https://streamlabs.com/widgets/chat-box/v1/4A9B198B90DB5D430B67",
+                "width": 320
+            },
+            "sync": 0,
+            "versioned_id": "browser_source",
+            "volume": 1.0232930183410645
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "browser_source",
+            "mixers": 255,
+            "monitoring_type": 2,
+            "muted": false,
+            "name": "Alert Box",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "height": 180,
+                "url": "https://streamlabs.com/alert-box/v3/4A9B198B90DB5D430B67"
+            },
+            "sync": 0,
+            "versioned_id": "browser_source",
             "volume": 1.0
         },
         {
@@ -124,7 +246,7 @@
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "--- 2",
+            "name": "---",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -147,16 +269,21 @@
             "enabled": true,
             "flags": 0,
             "hotkeys": {
-                "libobs.mute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "libobs.unmute": []
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.C920": [],
+                "libobs.hide_scene_item.Dressing": [],
+                "libobs.hide_scene_item.StreamCam": [],
+                "libobs.hide_scene_item.Yeti": [],
+                "libobs.show_scene_item.C920": [],
+                "libobs.show_scene_item.Dressing": [],
+                "libobs.show_scene_item.StreamCam": [],
+                "libobs.show_scene_item.Yeti": []
             },
-            "id": "browser_source",
-            "mixers": 255,
+            "id": "scene",
+            "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "BRB",
+            "name": "Deskcam",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -164,15 +291,155 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "css": "",
-                "height": 900,
-                "restart_when_active": true,
-                "shutdown": true,
-                "url": "https://livedebug.dev/stream-support/starting-soon.html",
-                "width": 1600
+                "custom_size": false,
+                "id_counter": 5,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 2,
+                        "locked": false,
+                        "name": "Dressing",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 1,
+                        "locked": false,
+                        "name": "StreamCam",
+                        "pos": {
+                            "x": 1599.0,
+                            "y": 839.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 0.50156247615814209,
+                            "y": 0.50208336114883423
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 4,
+                        "locked": false,
+                        "name": "Yeti",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 5,
+                        "locked": false,
+                        "name": "C920",
+                        "pos": {
+                            "x": 1598.0,
+                            "y": 899.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": -1.2484375238418579,
+                            "y": -1.2486110925674438
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
             },
             "sync": 0,
-            "versioned_id": "browser_source",
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "av_capture_input",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "C920",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "device": "0x14422000046d082d",
+                "device_name": "HD Pro Webcam C920"
+            },
+            "sync": 0,
+            "versioned_id": "av_capture_input",
             "volume": 1.0
         },
         {
@@ -194,7 +461,7 @@
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Be Right Back",
+            "name": "Starting Soon",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -203,7 +470,132 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 3,
+                "id_counter": 5,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 2,
+                        "locked": false,
+                        "name": "Dressing",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 4,
+                        "locked": false,
+                        "name": "BRB",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 5,
+                        "locked": false,
+                        "name": "Elgato Audio",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.Dressing": [],
+                "libobs.hide_scene_item.Elgato Background": [],
+                "libobs.hide_scene_item.StreamCam Full": [],
+                "libobs.hide_scene_item.Yeti": [],
+                "libobs.show_scene_item.Dressing": [],
+                "libobs.show_scene_item.Elgato Background": [],
+                "libobs.show_scene_item.StreamCam Full": [],
+                "libobs.show_scene_item.Yeti": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Full Screen",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 4,
                 "items": [
                     {
                         "align": 5,
@@ -249,7 +641,7 @@
                         "group_item_backup": false,
                         "id": 2,
                         "locked": false,
-                        "name": "BRB",
+                        "name": "StreamCam Full",
                         "pos": {
                             "x": 0.0,
                             "y": 0.0
@@ -257,8 +649,8 @@
                         "private_settings": {},
                         "rot": 0.0,
                         "scale": {
-                            "x": 1.0,
-                            "y": 1.0
+                            "x": 1.2531249523162842,
+                            "y": 1.2527778148651123
                         },
                         "scale_filter": "disable",
                         "visible": true
@@ -278,163 +670,9 @@
                         "group_item_backup": false,
                         "id": 3,
                         "locked": false,
-                        "name": "Elgato Audio",
+                        "name": "Yeti",
                         "pos": {
                             "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    }
-                ]
-            },
-            "sync": 0,
-            "versioned_id": "scene",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "libobs.unmute": []
-            },
-            "id": "coreaudio_input_capture",
-            "mixers": 255,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Yeti",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "device_id": "AppleUSBAudioEngine:Blue Microphones:Yeti Stereo Microphone:LT_19102508371362900B92_111000:2"
-            },
-            "sync": 0,
-            "versioned_id": "coreaudio_input_capture",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "libobs.unmute": []
-            },
-            "id": "coreaudio_input_capture",
-            "mixers": 255,
-            "monitoring_type": 2,
-            "muted": false,
-            "name": "Elgato Audio",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "device_id": "AppleUSBAudioEngine:Elgato:Game Capture HD60 S+:00049A442D000:4"
-            },
-            "sync": 0,
-            "versioned_id": "coreaudio_input_capture",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "av_capture_input",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Elgato VIdeo",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "device": "0x2000000fd9006a",
-                "device_name": "Game Capture HD60 S+",
-                "preset": "AVCaptureSessionPresetHigh"
-            },
-            "sync": 0,
-            "versioned_id": "av_capture_input",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Alert Box": [],
-                "libobs.hide_scene_item.Chat Box": [],
-                "libobs.hide_scene_item.Current Status": [],
-                "libobs.hide_scene_item.White Chat Background": [],
-                "libobs.show_scene_item.Alert Box": [],
-                "libobs.show_scene_item.Chat Box": [],
-                "libobs.show_scene_item.Current Status": [],
-                "libobs.show_scene_item.White Chat Background": []
-            },
-            "id": "scene",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Dressing",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "custom_size": false,
-                "id_counter": 8,
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 7,
-                        "locked": false,
-                        "name": "White Chat Background",
-                        "pos": {
-                            "x": 1600.0,
                             "y": 0.0
                         },
                         "private_settings": {},
@@ -461,68 +699,10 @@
                         "group_item_backup": false,
                         "id": 4,
                         "locked": false,
-                        "name": "Alert Box",
-                        "pos": {
-                            "x": 332.0,
-                            "y": 900.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 5,
-                        "locked": false,
-                        "name": "Chat Box",
-                        "pos": {
-                            "x": 1600.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 6,
-                        "locked": false,
-                        "name": "Current Status",
+                        "name": "Elgato Background",
                         "pos": {
                             "x": 0.0,
-                            "y": 900.0
+                            "y": 0.0
                         },
                         "private_settings": {},
                         "rot": 0.0,
@@ -537,33 +717,6 @@
             },
             "sync": 0,
             "versioned_id": "scene",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "av_capture_input",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "StreamCam",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "device": "0x1200000046d0893",
-                "device_name": "Logitech StreamCam",
-                "preset": "AVCaptureSessionPreset640x480"
-            },
-            "sync": 0,
-            "versioned_id": "av_capture_input",
             "volume": 1.0
         },
         {
@@ -757,22 +910,49 @@
             "deinterlace_mode": 0,
             "enabled": true,
             "flags": 0,
+            "hotkeys": {},
+            "id": "av_capture_input",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "StreamCam",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "device": "0x200000046d0893",
+                "device_name": "Logitech StreamCam #3",
+                "preset": "AVCaptureSessionPreset640x480"
+            },
+            "sync": 0,
+            "versioned_id": "av_capture_input",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
             "hotkeys": {
                 "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.Dressing": [],
-                "libobs.hide_scene_item.Elgato Background": [],
-                "libobs.hide_scene_item.StreamCam Full": [],
-                "libobs.hide_scene_item.Yeti": [],
-                "libobs.show_scene_item.Dressing": [],
-                "libobs.show_scene_item.Elgato Background": [],
-                "libobs.show_scene_item.StreamCam Full": [],
-                "libobs.show_scene_item.Yeti": []
+                "libobs.hide_scene_item.Alert Box": [],
+                "libobs.hide_scene_item.Chat Box": [],
+                "libobs.hide_scene_item.Current Status": [],
+                "libobs.hide_scene_item.White Chat Background": [],
+                "libobs.show_scene_item.Alert Box": [],
+                "libobs.show_scene_item.Chat Box": [],
+                "libobs.show_scene_item.Current Status": [],
+                "libobs.show_scene_item.White Chat Background": []
             },
             "id": "scene",
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Full Screen",
+            "name": "Dressing",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -781,7 +961,246 @@
             "push-to-talk-delay": 0,
             "settings": {
                 "custom_size": false,
-                "id_counter": 4,
+                "id_counter": 8,
+                "items": [
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 7,
+                        "locked": false,
+                        "name": "White Chat Background",
+                        "pos": {
+                            "x": 1600.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 4,
+                        "locked": false,
+                        "name": "Alert Box",
+                        "pos": {
+                            "x": 332.0,
+                            "y": 900.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 5,
+                        "locked": false,
+                        "name": "Chat Box",
+                        "pos": {
+                            "x": 1600.0,
+                            "y": 0.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    },
+                    {
+                        "align": 5,
+                        "bounds": {
+                            "x": 0.0,
+                            "y": 0.0
+                        },
+                        "bounds_align": 0,
+                        "bounds_type": 0,
+                        "crop_bottom": 0,
+                        "crop_left": 0,
+                        "crop_right": 0,
+                        "crop_top": 0,
+                        "group_item_backup": false,
+                        "id": 6,
+                        "locked": false,
+                        "name": "Current Status",
+                        "pos": {
+                            "x": 0.0,
+                            "y": 900.0
+                        },
+                        "private_settings": {},
+                        "rot": 0.0,
+                        "scale": {
+                            "x": 1.0,
+                            "y": 1.0
+                        },
+                        "scale_filter": "disable",
+                        "visible": true
+                    }
+                ]
+            },
+            "sync": 0,
+            "versioned_id": "scene",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {},
+            "id": "av_capture_input",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Elgato VIdeo",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "device": "0x12000000fd9006a",
+                "device_name": "Game Capture HD60 S+ #4",
+                "preset": "AVCaptureSessionPresetHigh"
+            },
+            "sync": 0,
+            "versioned_id": "av_capture_input",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "coreaudio_input_capture",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Elgato Audio",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "device_id": "AppleUSBAudioEngine:Elgato:Game Capture HD60 S+:00049A442D000:4"
+            },
+            "sync": 0,
+            "versioned_id": "coreaudio_input_capture",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
+            },
+            "id": "coreaudio_input_capture",
+            "mixers": 255,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Yeti",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "device_id": "AppleUSBAudioEngine:Blue Microphones:Yeti Stereo Microphone:LT_19102508371362900B92_111000:2"
+            },
+            "sync": 0,
+            "versioned_id": "coreaudio_input_capture",
+            "volume": 1.0
+        },
+        {
+            "balance": 0.5,
+            "deinterlace_field_order": 0,
+            "deinterlace_mode": 0,
+            "enabled": true,
+            "flags": 0,
+            "hotkeys": {
+                "OBSBasic.SelectScene": [],
+                "libobs.hide_scene_item.BRB": [],
+                "libobs.hide_scene_item.Dressing": [],
+                "libobs.hide_scene_item.Elgato Audio": [],
+                "libobs.show_scene_item.BRB": [],
+                "libobs.show_scene_item.Dressing": [],
+                "libobs.show_scene_item.Elgato Audio": []
+            },
+            "id": "scene",
+            "mixers": 0,
+            "monitoring_type": 0,
+            "muted": false,
+            "name": "Be Right Back",
+            "prev_ver": 419430408,
+            "private_settings": {},
+            "push-to-mute": false,
+            "push-to-mute-delay": 0,
+            "push-to-talk": false,
+            "push-to-talk-delay": 0,
+            "settings": {
+                "custom_size": false,
+                "id_counter": 3,
                 "items": [
                     {
                         "align": 5,
@@ -826,158 +1245,6 @@
                         "crop_top": 0,
                         "group_item_backup": false,
                         "id": 2,
-                        "locked": false,
-                        "name": "StreamCam Full",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.2531249523162842,
-                            "y": 1.2527778148651123
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 3,
-                        "locked": false,
-                        "name": "Yeti",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 4,
-                        "locked": false,
-                        "name": "Elgato Background",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    }
-                ]
-            },
-            "sync": 0,
-            "versioned_id": "scene",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.BRB": [],
-                "libobs.hide_scene_item.Dressing": [],
-                "libobs.hide_scene_item.Elgato Audio": [],
-                "libobs.show_scene_item.BRB": [],
-                "libobs.show_scene_item.Dressing": [],
-                "libobs.show_scene_item.Elgato Audio": []
-            },
-            "id": "scene",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "Starting Soon",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "custom_size": false,
-                "id_counter": 5,
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 2,
-                        "locked": false,
-                        "name": "Dressing",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 4,
                         "locked": false,
                         "name": "BRB",
                         "pos": {
@@ -1006,7 +1273,7 @@
                         "crop_right": 0,
                         "crop_top": 0,
                         "group_item_backup": false,
-                        "id": 5,
+                        "id": 3,
                         "locked": false,
                         "name": "Elgato Audio",
                         "pos": {
@@ -1034,48 +1301,17 @@
             "deinterlace_mode": 0,
             "enabled": true,
             "flags": 0,
-            "hotkeys": {},
-            "id": "av_capture_input",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "C920",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "device": "0x14422000046d082d",
-                "device_name": "HD Pro Webcam C920"
-            },
-            "sync": 0,
-            "versioned_id": "av_capture_input",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
             "hotkeys": {
-                "OBSBasic.SelectScene": [],
-                "libobs.hide_scene_item.C920": [],
-                "libobs.hide_scene_item.Dressing": [],
-                "libobs.hide_scene_item.StreamCam": [],
-                "libobs.hide_scene_item.Yeti": [],
-                "libobs.show_scene_item.C920": [],
-                "libobs.show_scene_item.Dressing": [],
-                "libobs.show_scene_item.StreamCam": [],
-                "libobs.show_scene_item.Yeti": []
+                "libobs.mute": [],
+                "libobs.push-to-mute": [],
+                "libobs.push-to-talk": [],
+                "libobs.unmute": []
             },
-            "id": "scene",
-            "mixers": 0,
+            "id": "browser_source",
+            "mixers": 255,
             "monitoring_type": 0,
             "muted": false,
-            "name": "Deskcam",
+            "name": "BRB",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -1083,129 +1319,15 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "custom_size": false,
-                "id_counter": 5,
-                "items": [
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 2,
-                        "locked": false,
-                        "name": "Dressing",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 1,
-                        "locked": false,
-                        "name": "StreamCam",
-                        "pos": {
-                            "x": 1599.0,
-                            "y": 839.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 0.50156247615814209,
-                            "y": 0.50208336114883423
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 4,
-                        "locked": false,
-                        "name": "Yeti",
-                        "pos": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": 1.0,
-                            "y": 1.0
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    },
-                    {
-                        "align": 5,
-                        "bounds": {
-                            "x": 0.0,
-                            "y": 0.0
-                        },
-                        "bounds_align": 0,
-                        "bounds_type": 0,
-                        "crop_bottom": 0,
-                        "crop_left": 0,
-                        "crop_right": 0,
-                        "crop_top": 0,
-                        "group_item_backup": false,
-                        "id": 5,
-                        "locked": false,
-                        "name": "C920",
-                        "pos": {
-                            "x": 1598.0,
-                            "y": 899.0
-                        },
-                        "private_settings": {},
-                        "rot": 0.0,
-                        "scale": {
-                            "x": -1.2484375238418579,
-                            "y": -1.2486110925674438
-                        },
-                        "scale_filter": "disable",
-                        "visible": true
-                    }
-                ]
+                "css": "",
+                "height": 900,
+                "restart_when_active": true,
+                "shutdown": true,
+                "url": "https://livedebug.dev/stream-support/be-right-back.html",
+                "width": 1600
             },
             "sync": 0,
-            "versioned_id": "scene",
+            "versioned_id": "browser_source",
             "volume": 1.0
         },
         {
@@ -1221,7 +1343,7 @@
             "mixers": 0,
             "monitoring_type": 0,
             "muted": false,
-            "name": "---",
+            "name": "--- 2",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -1249,11 +1371,11 @@
                 "libobs.push-to-talk": [],
                 "libobs.unmute": []
             },
-            "id": "browser_source",
+            "id": "coreaudio_input_capture",
             "mixers": 255,
             "monitoring_type": 2,
             "muted": false,
-            "name": "Alert Box",
+            "name": "Elgato Background",
             "prev_ver": 419430408,
             "private_settings": {},
             "push-to-mute": false,
@@ -1261,133 +1383,11 @@
             "push-to-talk": false,
             "push-to-talk-delay": 0,
             "settings": {
-                "height": 180,
-                "url": "https://streamlabs.com/alert-box/v3/4A9B198B90DB5D430B67"
+                "device_id": "AppleUSBAudioEngine:Elgato:Game Capture HD60 S+:00049A442D000:4"
             },
             "sync": 0,
-            "versioned_id": "browser_source",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "libobs.unmute": []
-            },
-            "id": "browser_source",
-            "mixers": 255,
-            "monitoring_type": 2,
-            "muted": false,
-            "name": "Chat Box",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "css": "",
-                "height": 800,
-                "url": "https://streamlabs.com/widgets/chat-box/v1/4A9B198B90DB5D430B67",
-                "width": 320
-            },
-            "sync": 0,
-            "versioned_id": "browser_source",
-            "volume": 1.0232930183410645
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {
-                "libobs.mute": [],
-                "libobs.push-to-mute": [],
-                "libobs.push-to-talk": [],
-                "libobs.unmute": []
-            },
-            "id": "browser_source",
-            "mixers": 255,
-            "monitoring_type": 2,
-            "muted": false,
-            "name": "Current Status",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "css": "",
-                "height": 180,
-                "restart_when_active": true,
-                "shutdown": true,
-                "url": "https://livedebug.github.io/livedebug/stream-support/status.html",
-                "width": 1600
-            },
-            "sync": 0,
-            "versioned_id": "browser_source",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "av_capture_input",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "StreamCam Full",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "device": "0x1200000046d0893",
-                "device_name": "Logitech StreamCam",
-                "preset": "AVCaptureSessionPreset1280x720"
-            },
-            "sync": 0,
-            "versioned_id": "av_capture_input",
-            "volume": 1.0
-        },
-        {
-            "balance": 0.5,
-            "deinterlace_field_order": 0,
-            "deinterlace_mode": 0,
-            "enabled": true,
-            "flags": 0,
-            "hotkeys": {},
-            "id": "color_source",
-            "mixers": 0,
-            "monitoring_type": 0,
-            "muted": false,
-            "name": "White Chat Background",
-            "prev_ver": 419430408,
-            "private_settings": {},
-            "push-to-mute": false,
-            "push-to-mute-delay": 0,
-            "push-to-talk": false,
-            "push-to-talk-delay": 0,
-            "settings": {
-                "height": 1080,
-                "width": 320
-            },
-            "sync": 0,
-            "versioned_id": "color_source_v2",
-            "volume": 1.0
+            "versioned_id": "coreaudio_input_capture",
+            "volume": 0.059808801859617233
         }
     ],
     "transition_duration": 300,
