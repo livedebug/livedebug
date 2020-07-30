@@ -12,7 +12,7 @@
     {
       "desc": "Play with discord/twitch webhooks",
       "complete": true,
-      "display": true
+      "display": false
     },
     {
       "desc": "Wrap up onivim 2 bug #1633 work",
@@ -22,7 +22,7 @@
     {
       "desc": "Display only the first 4 displayable tasks",
       "complete": true,
-      "display": true
+      "display": false
     }
   ]
 }
