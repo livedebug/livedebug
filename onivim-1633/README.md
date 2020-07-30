@@ -25,22 +25,44 @@ Issue reproduces with test build.  Validated correct behavior with neovim and vi
 
 # Hypothesis
 
-| ID    | Confidence | Status    | Hypothesis                                                      |
-| ----- | ---------- | --------- | --------------------------------------------------------------- |
-| 1     | High       | Confirmed | Issue is within libvim, not vim                                 |
-| 1.1   | High       | Confirmed | I and c have slightly different paths.                          |
-| 1.2   | Low        | Unknown   | OP_INSERT needs a bit more state enabled before it takes action |
-| 1.3   | Low        | Unknown   | Visual Mode is not fully setup for deletion                     |
-| 1.3.1 | Low        | Unknown   | Statemachine is receiving the incorrect data to operate on      |
+| Shortcode             | Hypothesis                                                      |  
+| --------------------- | --------------------------------------------------------------- |
+| libvim-problem        | Issue is within libvim, not vim                                 |
+| i-and-c-differ        | I and c have slightly different paths.                          |
+| opinsert-incomplete   | OP_INSERT needs a bit more state enabled before it takes action |
+| visualmode-incomplete | Visual Mode is not fully setup for deletion                     |
+| statemachine-broken   | Statemachine is receiving the incorrect data to operate on      |
+
+## Diagnosis flow
 
 ```mermaid
 graph TD
-  1{Doesn't compile} --> 1.1{abc}
-  1.1 --> 1.2{abc}
-  1.1 --> 1.3{def}
+  style issue fill:lightgreen
+  style libvim-problem  fill:lightgreen
+  style i-and-c-different fill:lightgreen
+  style statemachine-broken fill:pink
+
+  issue --> libvim-problem
+  libvim-problem --> i-and-c-different
+  i-and-c-different --> opinsert-incomplete
+  i-and-c-different --> visualmode-incomplete
+  i-and-c-different --> statemachine-broken
 ```
 
+# Narrative
+
+libvim is a fork of vim 8.0, with a onivim statemachine placed on top of it.  In this particular case the state-machine is not fully implemented
+
+# Outcome
+
+**Not a Bug** Not implemented yet.
+
 # Scratch Notes
+
+## 20200723
+
+[bryphe](https://github.com/bryphe) commented on [pull request](https://github.com/onivim/libvim/pull/215) that the statemachine supporting `I` was incomplete.  So not a bug, not implemented :(
+
 
 ## 20200722
 
