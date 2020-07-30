@@ -5,6 +5,16 @@
       "display": true
     },
     {
+      "desc": "Templatify Debug",
+      "complete": false,
+      "display": true
+    },
+    {
+      "desc": "Find a new bug!",
+      "complete": false,
+      "display": true
+    },
+    {
       "desc": "Make the status page update from git automagically with react",
       "complete": true,
       "display": false
@@ -16,7 +26,7 @@
     },
     {
       "desc": "Wrap up onivim 2 bug #1633 work",
-      "complete": false,
+      "complete": true,
       "display": true
     },
     {
