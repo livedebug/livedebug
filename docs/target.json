@@ -27,7 +27,7 @@
     {
       "desc": "Wrap up onivim 2 bug #1633 work",
       "complete": true,
-      "display": true
+      "display": false
     },
     {
       "desc": "Display only the first 4 displayable tasks",
