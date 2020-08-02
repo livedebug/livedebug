@@ -1,11 +1,11 @@
 
 # Problem Summary
 
-When renaming a scene, the scene name does not get updated on hitting enter.
+[obs-studio bug # 3044](https://github.com/obsproject/obs-studio/issues/3044) Can't Rename Scenes After Creating Them.
 
 # Preparation
 
-_This section describes the assumed steps to reproduce the problem.  Since each livedebug session is new to the streamer, this evolves quickly as we progress._
+Start OBS Studio, select a scene name.  Select "Rename", update name and hit enter.  Workaround is to click "command-enter".
 
 # Issue Reproduction
 
@@ -13,42 +13,20 @@ Verified on downloaded 25.0.8 and source downloaded "25.0.7-467-g478f1de8-modifi
 
 # Hypotheses
 
-_This section is a descriptive collection of ideas that need either proof or refutation.  The short code includes is used int eh diagnosis flow, the hypothesis is a description of the potential cause.  The proof point provides a method for either proving or disproving the hypothesis._
 
 | Shortcode             | Hypothesis                                                      | Proof Point |
 | --------------------- | --------------------------------------------------------------- | ----------- |
-| abc        | abc is not working                                 |             |
-| def        | def is not working                          |             |
-| ghi   | ghi needs a doohickey |             |
-| jkl | jkl is old                     |             |
-| mno   | mno is ot compiled properly      |             |
+| enter-not-bound        | Enter is not bound to the UI element,  which prevents the enter being received or processed properly.                                 | inspect-code            |
+| scenes-different-sources | Different behavior with scenes and sources implies different configuration | inspect-code |
 
 ## Diagnosis flow
 
-_This section represents a decision tree in how to debug and diagnose the problem.  
-The details are captured in the the table above, and are structured in a flow
-diagram below._
-
-_This section is intended to evolve as the consideration what to consider debugging are
-determined.  Each node should either be carried (default color), proven (green), or
-refuted (red).  The analysis and proof or refutation should be captured below in the worklog below._
 
 ```mermaid
 graph TD
-  style abc fill:lightgreen
-  style def  fill:lightgreen
-  style ghi fill:lightgreen
-  style jkl fill:pink
-  style mno fill:pink
-  style pqr fill:lightgreen
+  enter-not-bound
+  scenes-different-sources
 
-  abc --> def
-  def --> ghi
-  ghi --> jkl
-  ghi --> mno
-  ghi --> pqr
-
-  pqr-->stu
 
 ```
 
@@ -99,3 +77,8 @@ those packages.
 
 The issue was reproduced with a source built version `25.0.7-467-g478f1de8-modified`.
 Should confirm that the build does not include 25.0.8.
+
+Identified [obs-studio #3044](https://github.com/obsproject/obs-studio/issues/3044) as the actual issue.
+
+Scenes accepts the enter key, but does not update.  Sources does not accept the enter key.
+Failure mode is consistent.
