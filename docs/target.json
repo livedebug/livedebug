@@ -5,34 +5,19 @@
       "display": true
     },
     {
-      "desc": "Templatify Debug",
-      "complete": true,
-      "display": false
-    },
-    {
-      "desc": "Attempt to reproduce obs studio rename bug!",
+      "desc": "Make the obs-deps smarter regarding installing the packages",
       "complete": false,
       "display": true
     },
     {
-      "desc": "Make the status page update from git automagically with react",
-      "complete": true,
-      "display": false
+      "desc": "Include webp and libtiff in brew dependencies.",
+      "complete": false,
+      "display": true
     },
     {
-      "desc": "Play with discord/twitch webhooks",
-      "complete": true,
-      "display": false
-    },
-    {
-      "desc": "Wrap up onivim 2 bug #1633 work",
-      "complete": true,
-      "display": false
-    },
-    {
-      "desc": "Display only the first 4 displayable tasks",
-      "complete": true,
-      "display": false
+      "desc": "Version number for git build is *not* previous release.",
+      "complete": false,
+      "display": true
     }
   ]
 }
