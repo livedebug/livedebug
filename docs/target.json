@@ -6,11 +6,11 @@
     },
     {
       "desc": "Templatify Debug",
-      "complete": false,
-      "display": true
+      "complete": true,
+      "display": false
     },
     {
-      "desc": "Find a new bug!",
+      "desc": "Attempt to reproduce obs studio rename bug!",
       "complete": false,
       "display": true
     },
