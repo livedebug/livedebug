@@ -48,7 +48,7 @@ _This section summarizes the links, pull requests and other outcomes for the deb
 
 # Scratch Notes
 
-## 20200801
+## 20200801 [Youtube](https://www.youtube.com/watch?v=VCTmF1Veodw)
 
 Cloned obs-studio from github.  First build with `CI/full-build-macos.sh` worked.
 However packaging the packaged build could not start with a libqtiff error.  
