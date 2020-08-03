@@ -2,7 +2,8 @@
 
 LiveDebug is a programming livestream focusing primarily on debugging random problems that haven't been looked at before by the streamer.    The intent is to explore the
 approaches to debugging that are common everyday and to expose the exploration,
-deadends, and successes that come with debug.
+deadends, and successes that come with debug.  Most streams are archived on
+[Youtube](https://www.youtube.com/channel/UCeiO6Wx8hMZfxG1gOsh7Lyg?feature=applinks).
 
 Secondarily, LiveDebug is also a testbed for structured debugging.  Through the
 stream, hypothesis, analysis and log of things that have been noted in the debug
@@ -17,8 +18,8 @@ possible in the daily log on each bug page.
 
 | Date Start | Date End   | Resolution | Bug Info                             |
 | ---------- | ---------- | ---------- | ------------------------------------ |
-| 2020-08-01 | present    |             | [obs-studio #3044](obs-studio-3044/) |
-| 2020-07-15 | 2020-07-30 | Not a bug  | [Onivim 2 bug #1633](onivim-1633/)   |
+| 2020-08-01 | present    |             | [obs-studio #3044](obs-studio-3044/README.html) |
+| 2020-07-15 | 2020-07-30 | Not a bug  | [Onivim 2 bug #1633](onivim-1633/README.html)   |
 
 # Rules of the stream
 
@@ -33,7 +34,7 @@ Will stream usually Monday, Wednesday, and Friday around 10:30 PM to whenever.  
 We can be found on
 
 -   Twitch [bastiondebugging](https://twitch.tv/bastiondebugging)
--   Youtube archive - TBA
+-   Youtube archive - [LiveDebug](https://www.youtube.com/channel/UCeiO6Wx8hMZfxG1gOsh7Lyg?feature=applinks)
 -   Twitter - [livedebug](https://twitter.com/livedebug)
 -   Discord - [livedebug](https://invite.gg/livedebug)
 -   Reddit - [u/livedebug](https://reddit.com/u/livedebug)

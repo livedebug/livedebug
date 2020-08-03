@@ -38,12 +38,14 @@ in with a status that will frame this section._
 
 
 # Links, Pull Requests or other issues
+ - Include webp and libtiff in brew deps for macos
+   - [Issue 3242](https://github.com/obsproject/obs-studio/issues/3242)
+   - [Pull request 3243](https://github.com/obsproject/obs-studio/pull/3243)
 
-_This section summarizes the links, pull requests and other outcomes for the debugging session._
 
 # To Do
 - Make the obs-deps smarter regarding installing the packages.
-- Include webp and libtiff in brew dependencies.
+- Include webp and libtiff in brew dependencies (See PR and Issue above)
 - Version number for git build is *not* previous release.
 
 # Scratch Notes
@@ -61,6 +63,7 @@ Two issues came up with the build script.
 2. Repeated building will fail on obs-deps, since curl will see the file already
 existing.  At least the curl one should be fixed.
 3. `./CI/full-build-macos.sh -sb` will exit with the following error for libtiff/libqtiff.dylib
+
 ```  + Skipping full build
 [OBS-Studio] Creating macOS app bundle
 [OBS-Studio] Preparing OBS.app bundle
@@ -71,6 +74,7 @@ Collecting dependencies...
 
 /!\ WARNING: Dependency libtiff.5.dylib of /Users/mtp/stream/livedebug/obs-studio-123/obs-studio/build/OBS.app/Contents/PlugIns/imageformats/libqtiff.dylib not found
 ```
+
 4. Brew does not include by default libtiff, webp.  There is a hard dependency on
 those packages.  
 
