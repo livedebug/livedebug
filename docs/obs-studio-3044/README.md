@@ -1,5 +1,4 @@
-
-# Problem Summary
+# LiveDebug - obs-studio bug #3044
 
 [obs-studio bug # 3044](https://github.com/obsproject/obs-studio/issues/3044) Can't Rename Scenes After Creating Them.
 

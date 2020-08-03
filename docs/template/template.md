@@ -1,5 +1,5 @@
 
-# Problem Summary
+# <Problem Name>
 
 _This section describes the actual problem being investigated.  Generally a restatement or verbatim copy of the actual bug description._
 

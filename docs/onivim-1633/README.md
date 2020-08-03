@@ -1,6 +1,5 @@
-Details
+# LiveDebug - Onivim 2 #1633 - Insert doesn't work.
 
-Issue
 <https://github.com/onivim/oni2/issues/1633>
 
 # Pull requests and commits
