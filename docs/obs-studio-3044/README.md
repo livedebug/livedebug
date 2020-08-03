@@ -23,10 +23,16 @@ Verified on downloaded 25.0.8 and source downloaded "25.0.7-467-g478f1de8-modifi
 
 ```mermaid
 graph TD
+
+  issue   
+
+  style issue fill:yellow
+
   enter-not-bound
   scenes-different-sources
 
-
+  issue --> enter-not-bound
+  issue --> scenes-different-sources
 ```
 
 # Narrative Summary of Issue
@@ -41,14 +47,27 @@ in with a status that will frame this section._
  - Include webp and libtiff in brew deps for macos
    - [Issue 3242](https://github.com/obsproject/obs-studio/issues/3242)
    - [Pull request 3243](https://github.com/obsproject/obs-studio/pull/3243)
+- Allow repeated downloads to work
+   - [Issue 3244](https://github.com/obsproject/obs-studio/issues/3244)
 
 
 # To Do
-- Make the obs-deps smarter regarding installing the packages.
-- Include webp and libtiff in brew dependencies (See PR and Issue above)
+- Allow repeated downloads to work (see 20200802 notes).
+- ~~Include webp and libtiff in brew dependencies (See PR and Issue above)~~
 - Version number for git build is *not* previous release.
 
 # Scratch Notes
+
+## 20200802
+
+Forked and cloned to local.  Had a few issues with getting it built
+*must use --recursive** for checkout.  Created  [Issue 3242](https://github.com/obsproject/obs-studio/issues/3242) and [Pull request 3243](https://github.com/obsproject/obs-studio/pull/3243).
+
+Rebuilt with livedebug fork of obs-studio.
+
+Found likely code source `EditSceneName` seems to be the location that is included in the context menu.  This code is in void `OBSBasic::EditSceneName()` which calls `	ui->scenes->editItem(item);`.  Debug output was confirmed after rebuild with a simple blog("here") type message.
+
+It looks like the rebuild logic failed on "-C -" for curl commands in `CI/build-full-macos.sh`.  Filed [Issue 3244](https://github.com/obsproject/obs-studio/issues/3244), requested devs on discord give guidance on either removal, simple existence check or a full sha1/md5/sha256 check of the file before redownloading.  I expect that the xcode will allow incremental updates.
 
 ## 20200801 [Youtube](https://www.youtube.com/watch?v=VCTmF1Veodw)
 
