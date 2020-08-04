@@ -35,6 +35,22 @@ graph TD
   issue --> scenes-different-sources
 ```
 
+# Other Diagrams
+
+Call Sequence
+
+```mermaid
+sequenceDiagram
+
+
+    HitEnter ->>+ OBSBasic : EditSceneName()
+    RightClickRename ->>+ OBSBasic : EditSceneName()
+    OBSBasic ->>+ ui_scenes : editItem()
+    HitEsc ->>+ OBSBasic : SceneNameEdited()
+
+    HitCommandEnter ->>+ OBSBasic : SourceRenamed()
+```
+
 # Narrative Summary of Issue
 
 _**Not a Bug** Not implemented yet._
@@ -46,17 +62,28 @@ in with a status that will frame this section._
 # Links, Pull Requests or other issues
  - Include webp and libtiff in brew deps for macos
    - [Issue 3242](https://github.com/obsproject/obs-studio/issues/3242)
-   - [Pull request 3243](https://github.com/obsproject/obs-studio/pull/3243)
+   - ~~[Pull request 3243](https://github.com/obsproject/obs-studio/pull/3243)~~
 - Allow repeated downloads to work
    - [Issue 3244](https://github.com/obsproject/obs-studio/issues/3244)
 
 
 # To Do
-- Allow repeated downloads to work (see 20200802 notes).
+- ~~Allow repeated downloads to work (see 20200802 notes).~~
 - ~~Include webp and libtiff in brew dependencies (See PR and Issue above)~~
 - Version number for git build is *not* previous release.
 
 # Scratch Notes
+
+## 20200803
+
+Explored a bit more of the event model - adding a few extra items for the sequence
+diagram to model the interactions.  
+
+Discussions on github issues for the two existing 3242 and 3244 bugs.  3242 has
+exposed a obs-deps build time dependency on brew packages that were missing in my
+environment.  PavTheMav has confirmed these issues and will be generating a fix.  
+3244 exposed an issue with older versions of curl in macOS Mojave not being compatible with the S3 download continuation - returning 33 which triggers the build failure.  
+Again, PavTheMav has picked it up and is putting it on his backlog.
 
 ## 20200802
 
@@ -65,7 +92,7 @@ Forked and cloned to local.  Had a few issues with getting it built
 
 Rebuilt with livedebug fork of obs-studio.
 
-Found likely code source `EditSceneName` seems to be the location that is included in the context menu.  This code is in void `OBSBasic::EditSceneName()` which calls `	ui->scenes->editItem(item);`.  Debug output was confirmed after rebuild with a simple blog("here") type message.
+Found likely code source `EditSceneName` seems to be the location that is included in the context menu.  This code is in `void OBSBasic::EditSceneName()` which calls `	ui->scenes->editItem(item);`.  Debug output was confirmed after rebuild with a simple blog("here") type message.
 
 It looks like the rebuild logic failed on "-C -" for curl commands in `CI/build-full-macos.sh`.  Filed [Issue 3244](https://github.com/obsproject/obs-studio/issues/3244), requested devs on discord give guidance on either removal, simple existence check or a full sha1/md5/sha256 check of the file before redownloading.  I expect that the xcode will allow incremental updates.
 
