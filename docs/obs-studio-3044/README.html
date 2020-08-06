@@ -37,6 +37,11 @@
 <td>Different behavior with scenes and sources implies different configuration</td>
 <td>inspect-code</td>
 </tr>
+<tr>
+<td>hook-for-enter</td>
+<td>The hook for enter key <code>obs-basic-main.cpp:320</code> should be disabled to prevent re-entering of the edit stage.</td>
+<td></td>
+</tr>
 </tbody>
 </table>
 <h2 id="diagnosis-flow">Diagnosis flow</h2>
@@ -45,29 +50,41 @@
   issue   
 
   style issue fill:yellow
+  style hook-for-enter fill:lightgreen
 
   enter-not-bound
   scenes-different-sources
 
   issue --&gt; enter-not-bound
   issue --&gt; scenes-different-sources
+  issue --&gt; hook-for-enter
 </code></pre>
 <h1>Other Diagrams</h1>
 <p>Call Sequence</p>
+<p>Editing</p>
 <pre class="mermaid-block"><code class="language-mermaid mermaid">sequenceDiagram
 
 
     HitEnter -&gt;&gt;+ OBSBasic : EditSceneName()
     RightClickRename -&gt;&gt;+ OBSBasic : EditSceneName()
     OBSBasic -&gt;&gt;+ ui_scenes : editItem()
-    HitEsc -&gt;&gt;+ OBSBasic : SceneNameEdited()
+
 
     HitCommandEnter -&gt;&gt;+ OBSBasic : SourceRenamed()
 </code></pre>
+<p>Hitting esc</p>
+<pre class="mermaid-block"><code class="language-mermaid mermaid">sequenceDiagram
+    HitEsc -&gt;&gt;+ OBSBasic : SceneNameEdited()
+
+</code></pre>
 <h1>Narrative Summary of Issue</h1>
-<p><em><strong>Not a Bug</strong> Not implemented yet.</em></p>
-<p><em>This section summarizes the narrative of the issue.  The section should lead
-in with a status that will frame this section.</em></p>
+<p>The root cause of this bug appears to be in <a href="https://github.com/obsproject/obs-studio/blob/master/UI/window-basic-main.cpp#L315">window-basic-main.cpp#L315</a> where the
+UI element has “Qt::Key_Return” added as a shortcut.  This appears to cause
+the Edit to be called again when the user hits “Enter” once more.  This explanation
+is incomplete as it doesn’t provide for a reason for the slightly different behaviors
+between the Source and Scene.</p>
+<h2 id="resolution">Resolution</h2>
+<p>TBD</p>
 <h1>Links, Pull Requests or other issues</h1>
 <ul>
 <li>Include webp and libtiff in brew deps for macos
@@ -89,6 +106,21 @@ in with a status that will frame this section.</em></p>
 <li>Version number for git build is <em>not</em> previous release.</li>
 </ul>
 <h1>Scratch Notes</h1>
+<h2 id="20200805">20200805</h2>
+<p>Adapted path to remove use the homebrew curl (7.71) vs Mojave curl (7.54).  This allows incremental builds to go much faster.</p>
+<p>While identifying other hooks, discovered the following code at <a href="https://github.com/obsproject/obs-studio/blob/master/UI/window-basic-main.cpp#L315">window-basic-main.cpp#L315</a>:</p>
+<pre class="code-block"><code class="language-">    renameScene-&gt;setShortcut({Qt::Key_Return});
+    renameSource-&gt;setShortcut({Qt::Key_Return});
+</code></pre>
+<p>The hypothesis here is that the renameSource/renameScene will hook Key_Return
+into the renameSource, and so when editing the source, hitting Return wil
+reenter the edit mode.  Which prevents editing occuring.</p>
+<p>Without those lines, the behavior is consistent, but the ability to hit “Enter” to
+edit is missing.  This appears to be the root cause for the issue.  Note that the
+behaviors between Scene and Source is slightly different - Scene allows editing, but
+hitting enter will return it to the original text.  Source will remain in edit mode.<br>
+I’m assuming that the UI definition of the two elements are slightly different.</p>
+<p>Will work with the obs-studio devs to work out the next steps.</p>
 <h2 id="20200803">20200803</h2>
 <p>Explored a bit more of the event model - adding a few extra items for the sequence
 diagram to model the interactions.</p>
