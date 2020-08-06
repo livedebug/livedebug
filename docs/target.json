@@ -5,27 +5,12 @@
       "display": true
     },
     {
-      "desc": "Make the obs-deps smarter regarding installing the packages",
+      "desc": "Understanding the QT Event model",
       "complete": false,
       "display": true
     },
     {
       "desc": "Create a stream is over page",
-      "complete": false,
-      "display": true
-    },
-    {
-      "desc": "Update docs for hooking in new bug",
-      "complete": false,
-      "display": true
-    },
-    {
-      "desc": "Include webp and libtiff in brew dependencies.",
-      "complete": false,
-      "display": true
-    },
-    {
-      "desc": "Version number for git build is *not* previous release.",
       "complete": false,
       "display": true
     },
