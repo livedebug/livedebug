@@ -47,7 +47,9 @@ Editing
 sequenceDiagram
 
 
-    HitEnter ->>+ OBSBasic : EditSceneName()
+    Normal ->>+ OBSBasic : EditSceneName()
+    RenamingSource ->>+ OBSBasic : EditSceneName()
+
     RightClickRename ->>+ OBSBasic : EditSceneName()
     OBSBasic ->>+ ui_scenes : editItem()
 
@@ -64,22 +66,34 @@ sequenceDiagram
 
 # Narrative Summary of Issue
 
-The root cause of this bug appears to be in [window-basic-main.cpp#L315](https://github.com/obsproject/obs-studio/blob/master/UI/window-basic-main.cpp#L315) where the
-UI element has "Qt::Key_Return" added as a shortcut.  This appears to cause
-the Edit to be called again when the user hits "Enter" once more.  This explanation
-is incomplete as it doesn't provide for a reason for the slightly different behaviors
+The root cause of this bug appears to be in [window-basic-main.cpp#L315](https://github.com/obsproject/obs-studio/blob/master/UI/window-basic-main.cpp#L315) where the UI element has
+"Qt::Key_Return" added as a shortcut.  This appears to cause the Edit to be called again
+when the user hits "Enter" once more.  This explanation is incomplete as it doesn't provide
+for a reason for the slightly different behaviors
 between the Source and Scene.
 
 ## Resolution
 
-TBD
+Created PR to remove the Hotkey binding of `Return`.  This should provide a reasonable
+UI experience albeit without the ability to just hit Return when selected.  
+
+During debugging discovered 2 other classes of issues.  
+
+1. Dependencies on homebrew were not known (#22 and #3242).  These were acknowledged
+and resolved by PatTheMav.
+2. Older versions of macOS have a curl that returns a different return code (33) when hitting a continuation request.  This breaks the build for Mojave.  Pa
 
 # Links, Pull Requests or other issues
+ - Actual issue being debugged
+   - Issue [obsproject/obs-studio#3044](https://github.com/obsproject/obs-studio/issues/3044)
+   - Pull Request [obsproject/obs-studio#3271](https://github.com/obsproject/obs-studio/pull/3271)
+ - Further brew deps on xz and pcre
+   - Issue [obsproject/obs-deps#22](https://github.com/obsproject/obs-deps/issues/22)
  - Include webp and libtiff in brew deps for macos
-   - [Issue 3242](https://github.com/obsproject/obs-studio/issues/3242)
+   - Issue [obsproject/obs-studio#3242](https://github.com/obsproject/obs-studio/issues/3242)
    - ~~[Pull request 3243](https://github.com/obsproject/obs-studio/pull/3243)~~
 - Allow repeated downloads to work
-   - [Issue 3244](https://github.com/obsproject/obs-studio/issues/3244)
+   - Issue [obsproject/obs-studio#3244](https://github.com/obsproject/obs-studio/issues/3244)
 
 
 # To Do
@@ -88,6 +102,18 @@ TBD
 - Version number for git build is *not* previous release.
 
 # Scratch Notes
+
+## 20200810
+
+PR was rejected for 2 reasons.  
+1) It was rejected since it removes a level of consistency with both obs-studio for other platforms and also there are sufficient examples of the macOS behavior of hitting enter on a list item.  
+2) It appears that there might be an existing bug for all the platforms associated with this flow (I suspect that) Linux has a problem to if you hit F2 while editing.
+
+Git was an unfriendly beast, had tried following github pull request to update, but that went and changed all the commits.  Eventually followed a command line flow to add the upstream, merge it in, rebase and then push.
+
+## 20200806
+
+New Catalina install discovered that there are still dependencies on pcre and xz from brew.  Raised [obsstudio/obs-deps#22](https://github.com/obsproject/obs-deps/issues/22)
 
 ## 20200805
 
@@ -119,9 +145,9 @@ diagram to model the interactions.
 
 Discussions on github issues for the two existing 3242 and 3244 bugs.  3242 has
 exposed a obs-deps build time dependency on brew packages that were missing in my
-environment.  PavTheMav has confirmed these issues and will be generating a fix.  
+environment.  PatTheMav has confirmed these issues and will be generating a fix.  
 3244 exposed an issue with older versions of curl in macOS Mojave not being compatible with the S3 download continuation - returning 33 which triggers the build failure.  
-Again, PavTheMav has picked it up and is putting it on his backlog.
+Again, PatTheMav has picked it up and is putting it on his backlog.
 
 ## 20200802
 
