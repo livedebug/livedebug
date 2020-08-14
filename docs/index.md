@@ -18,6 +18,7 @@ possible in the daily log on each bug page.
 
 | Date Start | Date End   | Resolution | Bug Info                             |
 | ---------- | ---------- | ---------- | ------------------------------------ |
+| 2020-08-14 | present    |             | [obs-studio #3280](obs-studio-3280/README.html) |
 | 2020-08-01 | present    |             | [obs-studio #3044](obs-studio-3044/README.html) |
 | 2020-07-15 | 2020-07-30 | Not a bug  | [Onivim 2 bug #1633](onivim-1633/README.html)   |
 
