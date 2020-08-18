@@ -104,3 +104,5 @@ And confirmed that the camera outputs in NV12.  Debug code in [av-capture.mm#104
 00:58:52.032:   Using format: <AVCaptureDeviceFormat: 0x60000384f6e0> 'vide'/'420v' enc dims = 1920x1080, pres dims = 1920x108
 0 { 60.01 fps }
 ```
+
+[Intel Power Gadget](https://software.intel.com/content/www/us/en/develop/articles/intel-power-gadget.html#attachment-heading) provides useful graphs of the perfomance of the system.  Also macOS Activity Monitor also provides a GPU performance image.
