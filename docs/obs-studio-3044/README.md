@@ -25,7 +25,7 @@ Verified on downloaded 25.0.8 and source downloaded "25.0.7-467-g478f1de8-modifi
 ```mermaid
 graph TD
 
-  issue   
+  issue
 
   style issue fill:yellow
   style hook-for-enter fill:lightgreen
@@ -45,6 +45,17 @@ Call Sequence
 Editing
 ```mermaid
 sequenceDiagram
+
+  ui_sourcesDock ->>+ OBSBasic : EditSceneName()
+  OBSBasic ->>+ QListWidget : editItem()
+
+
+```
+
+```mermaid
+sequenceDiagram
+
+
 
 
     Normal ->>+ OBSBasic : EditSceneName()
@@ -75,9 +86,9 @@ between the Source and Scene.
 ## Resolution
 
 Created PR to remove the Hotkey binding of `Return`.  This should provide a reasonable
-UI experience albeit without the ability to just hit Return when selected.  
+UI experience albeit without the ability to just hit Return when selected.
 
-During debugging discovered 2 other classes of issues.  
+During debugging discovered 2 other classes of issues.
 
 1. Dependencies on homebrew were not known (#22 and #3242).  These were acknowledged
 and resolved by PatTheMav.
@@ -105,8 +116,8 @@ and resolved by PatTheMav.
 
 ## 20200810
 
-PR was rejected for 2 reasons.  
-1) It was rejected since it removes a level of consistency with both obs-studio for other platforms and also there are sufficient examples of the macOS behavior of hitting enter on a list item.  
+PR was rejected for 2 reasons.
+1) It was rejected since it removes a level of consistency with both obs-studio for other platforms and also there are sufficient examples of the macOS behavior of hitting enter on a list item.
 2) It appears that there might be an existing bug for all the platforms associated with this flow (I suspect that) Linux has a problem to if you hit F2 while editing.
 
 Git was an unfriendly beast, had tried following github pull request to update, but that went and changed all the commits.  Eventually followed a command line flow to add the upstream, merge it in, rebase and then push.
@@ -133,7 +144,7 @@ reenter the edit mode.  Which prevents editing occuring.
 Without those lines, the behavior is consistent, but the ability to hit "Enter" to
 edit is missing.  This appears to be the root cause for the issue.  Note that the
 behaviors between Scene and Source is slightly different - Scene allows editing, but
-hitting enter will return it to the original text.  Source will remain in edit mode.  
+hitting enter will return it to the original text.  Source will remain in edit mode.
 I'm assuming that the UI definition of the two elements are slightly different.
 
 Will work with the obs-studio devs to work out the next steps.
@@ -141,12 +152,12 @@ Will work with the obs-studio devs to work out the next steps.
 ## 20200803
 
 Explored a bit more of the event model - adding a few extra items for the sequence
-diagram to model the interactions.  
+diagram to model the interactions.
 
 Discussions on github issues for the two existing 3242 and 3244 bugs.  3242 has
 exposed a obs-deps build time dependency on brew packages that were missing in my
-environment.  PatTheMav has confirmed these issues and will be generating a fix.  
-3244 exposed an issue with older versions of curl in macOS Mojave not being compatible with the S3 download continuation - returning 33 which triggers the build failure.  
+environment.  PatTheMav has confirmed these issues and will be generating a fix.
+3244 exposed an issue with older versions of curl in macOS Mojave not being compatible with the S3 download continuation - returning 33 which triggers the build failure.
 Again, PatTheMav has picked it up and is putting it on his backlog.
 
 ## 20200802
@@ -163,7 +174,7 @@ It looks like the rebuild logic failed on "-C -" for curl commands in `CI/build-
 ## 20200801 [Youtube](https://www.youtube.com/watch?v=VCTmF1Veodw)
 
 Cloned obs-studio from github.  First build with `CI/full-build-macos.sh` worked.
-However packaging the packaged build could not start with a libqtiff error.  
+However packaging the packaged build could not start with a libqtiff error.
 No immediate documentation on how to execute (assume that OBS.app is the right
 one to target).
 
@@ -186,7 +197,7 @@ Collecting dependencies...
 ```
 
 4. Brew does not include by default libtiff, webp.  There is a hard dependency on
-those packages.  
+those packages.
 
 The issue was reproduced with a source built version `25.0.7-467-g478f1de8-modified`.
 Should confirm that the build does not include 25.0.8.

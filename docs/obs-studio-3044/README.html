@@ -46,7 +46,7 @@
 <h2 id="diagnosis-flow">Diagnosis flow</h2>
 <pre class="mermaid-block"><code class="language-mermaid mermaid">graph TD
 
-  issue   
+  issue
 
   style issue fill:yellow
   style hook-for-enter fill:lightgreen
@@ -62,6 +62,15 @@
 <p>Call Sequence</p>
 <p>Editing</p>
 <pre class="mermaid-block"><code class="language-mermaid mermaid">sequenceDiagram
+
+  ui_sourcesDock -&gt;&gt;+ OBSBasic : EditSceneName()
+  OBSBasic -&gt;&gt;+ QListWidget : editItem()
+
+
+</code></pre>
+<pre class="mermaid-block"><code class="language-mermaid mermaid">sequenceDiagram
+
+
 
 
     Normal -&gt;&gt;+ OBSBasic : EditSceneName()
@@ -146,7 +155,7 @@ reenter the edit mode.  Which prevents editing occuring.</p>
 <p>Without those lines, the behavior is consistent, but the ability to hit “Enter” to
 edit is missing.  This appears to be the root cause for the issue.  Note that the
 behaviors between Scene and Source is slightly different - Scene allows editing, but
-hitting enter will return it to the original text.  Source will remain in edit mode.<br>
+hitting enter will return it to the original text.  Source will remain in edit mode.
 I’m assuming that the UI definition of the two elements are slightly different.</p>
 <p>Will work with the obs-studio devs to work out the next steps.</p>
 <h2 id="20200803">20200803</h2>
@@ -154,8 +163,8 @@ I’m assuming that the UI definition of the two elements are slightly different
 diagram to model the interactions.</p>
 <p>Discussions on github issues for the two existing 3242 and 3244 bugs.  3242 has
 exposed a obs-deps build time dependency on brew packages that were missing in my
-environment.  PatTheMav has confirmed these issues and will be generating a fix.<br>
-3244 exposed an issue with older versions of curl in macOS Mojave not being compatible with the S3 download continuation - returning 33 which triggers the build failure.<br>
+environment.  PatTheMav has confirmed these issues and will be generating a fix.
+3244 exposed an issue with older versions of curl in macOS Mojave not being compatible with the S3 download continuation - returning 33 which triggers the build failure.
 Again, PatTheMav has picked it up and is putting it on his backlog.</p>
 <h2 id="20200802">20200802</h2>
 <p>Forked and cloned to local.  Had a few issues with getting it built
@@ -165,7 +174,7 @@ Again, PatTheMav has picked it up and is putting it on his backlog.</p>
 <p>It looks like the rebuild logic failed on “-C -” for curl commands in <code>CI/build-full-macos.sh</code>.  Filed <a href="https://github.com/obsproject/obs-studio/issues/3244">Issue 3244</a>, requested devs on discord give guidance on either removal, simple existence check or a full sha1/md5/sha256 check of the file before redownloading.  I expect that the xcode will allow incremental updates.</p>
 <h2 id="20200801-youtube">20200801 <a href="https://www.youtube.com/watch?v=VCTmF1Veodw">Youtube</a></h2>
 <p>Cloned obs-studio from github.  First build with <code>CI/full-build-macos.sh</code> worked.
-However packaging the packaged build could not start with a libqtiff error.<br>
+However packaging the packaged build could not start with a libqtiff error.
 No immediate documentation on how to execute (assume that OBS.app is the right
 one to target).</p>
 <p>Two issues came up with the build script.</p>
