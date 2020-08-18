@@ -25,7 +25,7 @@ _This section is a descriptive collection of ideas that need either proof or ref
 
 ## Diagnosis flow
 
-_This section represents a decision tree in how to debug and diagnose the problem.  
+_This section represents a decision tree in how to debug and diagnose the problem.
 The details are captured in the the table above, and are structured in a flow
 diagram below._
 
@@ -33,6 +33,20 @@ _This section is intended to evolve as the consideration what to consider debugg
 determined.  Each node should either be carried (default color), proven (green), or
 refuted (red).  The analysis and proof or refutation should be captured below in the worklog below._
 
+Legend
+```mermaid
+graph TD
+
+style maybe fill:lightcyan
+style maybe-not fill:MistyRose
+style disproved fill:lightpink
+style issue fill:yellow
+style confirmed fill:lightgreen
+
+unknown
+
+```
+Decision Tree
 ```mermaid
 graph TD
   style abc fill:lightgreen
